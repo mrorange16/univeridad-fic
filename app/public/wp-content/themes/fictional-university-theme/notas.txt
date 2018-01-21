@@ -1,0 +1,158 @@
+front-page vs index este ultimo es para los paginas cuando no esta los page.php y es para listar los post de un blog
+
+single.php es el formato de los post
+
+archive.php archive.php (or other more specific archive files) it will display your date, author, etc. archives as well. But it doesn't have to.
+
+custom query  ej  $homepagePosts = new WP_Query(array(   
+            'posts_per_page' => 2
+          ));
+  ver front-page.php  usar esto para limpiar los whiles o los query es obligatorio  } wp_reset_postdata();
+
+  gulp watch cambios inmediatos en el php 
+  gulp scripts para compilar
+  instalar node 
+  node --version
+  
+  npm install gulp-cli -g
+  gulp --version
+
+ubicarse en el proyecto
+usar los 4 archivos y cambiar settings.js
+  npm install
+
+
+  para custom post usar mu-plugins carga automaticamente, cuando se crean nuevos tipos de posta veces hay que ir a permanentlink y solo darle salvar
+
+  ademas si se quiere usar un single.php para tipo de post en especifico se utliza single-nombre.php
+
+  custom fields 'supports' => array('title', 'editor', 'excerpt', 'custom-fields'), y plugins
+  Advanced Custom Fields(ACF) CMB2 Custom Metaboxes 2
+
+   Ordering (Sorting) Custom Queries ver front-page.php como se ordenan por custom fields se utilizan los labels de meta
+
+   Manipulating Default URL Based Queries permite hacer cambios en este caso a archive-events.php desde functions.php add_action('pre_get_posts', 'university_adjust_queries'); el query afecta a todos por eso se hace el filtro del if
+
+
+   para crear relaciones en custom fields tipo de espacion relational ver el ejemplo de Related Program
+
+   wp_reset_postdata() cuando hay varios custom queries porque reinicia todo y obtiene la info del post activo(URL)
+
+   por defecto algunos temas no puede añadir imagen se usa una sintaxis que esta en after_setup_theme en functions.php y
+   añadir la opcion en un plugin en nuestro caso el que esta aqui \amazing-college\app\public\wp-content\mu-plugins
+
+   RECORDAR muchas cosas de wp se obtienen de funciones ya hechas antes de de hacer un query primero hacer un get_ o un the_
+
+   regenerate thumbnails para ajustar imagenes ya creadas y no volver a subirlas de nuevo sino que toma las que estan y las ajusta segun el functions.php
+
+
+   get_template_part('template-parts/content', 'event'); permite tener codigo repetido en distintas partes para organizar
+
+
+Funcion para hacer funcionar google map en produccion el valor de key se cambia
+   function universityMapKey($api) {
+  $api['key'] = 'AIzaSyBh9b1rNCp6kOi5JeMHiRP4klDymBeoEWk';
+  return $api;
+}
+
+acf=advanced custom field
+add_filter('acf/fields/google_map/api', 'universityMapKey');
+
+wp-json/wp/v2/posts ver json generado raw data
+getpostman permite hacer los json mas readable para nosotros
+
+este wp-json/wp/v2/posts puede manipularse puedo agregar un id siguiendo las reglas de WP para generar nuestro json
+
+template literal 
+
+ getResults() {                                    Ese posts => de abajo se llama ES6 Arrow Function instead of anonymous functions
+    $.getJSON('http://localhost:3000/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+this.resultsDiv.html(`
+        <h2 class="search-overlay__section-title">General Information</h2>
+        <ul class="link-list min-list">
+          ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
+
+          ese .map recorre un array por eso no se usa while o for
+        </ul>
+      `);
+
+ Utiliza las comillas concatenar html ya que es complicado en uso normal
+
+  ${lo que vaya dentro de aqui es JS en vez de texto plano} se utiliza para combinar con template literal
+
+  la carpeta inc es para organizar el functions.php no este lleno 
+
+ array_values para quitar id a arrays generados
+
+ en la ruta a secas ?s=ejemplo para busquedas normales
+
+roles
+
+Super Admin - Quien cuenta con acceso a la característica de administración de la red de blogs completa.
+Administrador - Quien tiene acceso a todas las características de administración de un sitio en particular.
+Editor - Quien puede publicar y editar entradas, propias y de otros usuarios.
+Autor - Quien puede publicar y editar sus propias entradas.
+Colaborador - Quien puede escribir y editar sus propias entradas pero no publicarlas.
+Subscriptor - Quien solamente puede editar su perfil.
+
+Members justin tadkicj
+
+The most powerful user, role, and capability management plugin for WordPress.
+
+para custom roles
+
+Esto se utiliza cuando se geenera html desde una respuesta ajax, que tiene eventos js pero que se crearon envivo y no cuando se carga la pagina
+    $("#my-notes").on("click", ".delete-note", this.deleteNote);
+
+
+    esc_attr elimina javascript y html malisioso
+
+    Deployment
+
+Path A
+    mediante plugin
+
+    All-in-One WP Migration
+
+    export and import
+
+    Path B
+    mediante git
+
+    WP Migrate DB
+en el admin de WP
+   Tools/Migrate DB
+   Programas para hace deployments desde repositorios git
+   *deployhq
+   deploybot
+
+   ssh
+
+   hostname
+   ftp.nombresitio.com
+   port
+   18765
+   username
+   esto esta en el cpanel/files/ftp accounts
+   luego usar verificacion ssh key
+   copiar el generado ir a cpanel de nuevo
+   advanced/ssh-shell access y pegar el code
+
+   deployment path
+   public_html/
+
+   subdirectory
+   en local by flywheel seria public
+
+   enable auto deployment copiar el link y pegarlo en webhook bitbucket o en github
+
+   ->found_posts cuenta los posts sin importar paginacion
+
+   SEARCH custom REST url
+
+   NOTES ingresando mediante REST
+
+   LIKES custom POST/DELETE REST
+
+
+nuevo.com cambiar en la DB
