@@ -8,9 +8,9 @@ single-{post-type}-{slug}.php
 page.php para mostrar lo que sea
 page-{slug}.php
 
-index.php
+index.php crear un page Blog se utiliza para este ultimo
 
-front-page
+front-page crear una page Home
 
 las funciones con the_ retornan un echo y la get_ solo valor
 
