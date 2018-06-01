@@ -1,9 +1,12 @@
 archive.php es para mostar listado de un tipo de post especifico
+archive-{slug}.php
+
 
 single.php para mostrar el detalle del post
+single-{post-type}-{slug}.php 
 
 page.php para mostrar lo que sea
-
+page-{slug}.php
 
 index.php
 
