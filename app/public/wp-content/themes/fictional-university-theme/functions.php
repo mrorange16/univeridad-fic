@@ -117,6 +117,8 @@ function universityMapKey($api) {
   return $api;
 }
 
+//los filtros siempre devuelven un valor para continuar
+//se utilizan para modificar algun valor antes de ser procesado o mostrado 
 add_filter('acf/fields/google_map/api', 'universityMapKey');
 
 
