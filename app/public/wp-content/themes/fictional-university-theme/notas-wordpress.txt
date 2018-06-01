@@ -11,3 +11,5 @@ page-{slug}.php
 index.php
 
 front-page
+
+las funciones con the_ retornan un echo y la get_ solo valor
