@@ -1,0 +1,10 @@
+archive.php es para mostar listado de un tipo de post especifico
+
+single.php para mostrar el detalle del post
+
+page.php para mostrar lo que sea
+
+
+index.php
+
+front-page
