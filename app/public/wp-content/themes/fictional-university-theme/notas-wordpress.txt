@@ -1,5 +1,5 @@
 archive.php es para mostar listado de un tipo de post especifico
-archive-{slug}.php
+archive-{post-type}.php
 
 
 single.php para mostrar el detalle del post
