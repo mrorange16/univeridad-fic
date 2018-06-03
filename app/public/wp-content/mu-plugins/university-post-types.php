@@ -1,5 +1,6 @@
 <?php
 //Recordar que cada vez que se cree un nuevo post_type ir a settings y salvar en permanent links
+//custom fields ACF el plugin que se uso aqui y el otro es CMB2
 function university_post_types() {
   
   // Campus Post type
