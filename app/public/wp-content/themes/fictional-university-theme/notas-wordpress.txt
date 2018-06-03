@@ -16,3 +16,5 @@ las funciones con the_ retornan un echo y la get_ solo valor
 
 Marcos
 s*l*c**n
+
+Must Use Plugin(mu-plugins) para custom types esto permite borrar la info de la abse de datos en ves de usarlo en el functions
