@@ -1,5 +1,5 @@
 <?php
-
+//Recordar que cada vez que se cree un nuevo post_type ir a settings y salvar en permanent links
 function university_post_types() {
   
   // Campus Post type
